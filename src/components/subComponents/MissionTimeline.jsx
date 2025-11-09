@@ -74,7 +74,7 @@ const MissionTimeline = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen w-full overflow-hidden bg-black text-white py-16"
+      className="relative min-h-screen w-full overflow-hidden bg-black text-white py-4"
     >
       {/* 🎥 Background Video */}
       <div className="absolute inset-0 z-0">

@@ -8,7 +8,6 @@ export default function GSAPProvider({ children }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Select all elements that should animate on scroll
     const elements = document.querySelectorAll("[data-gsap]");
 
     elements.forEach((el) => {
@@ -20,7 +19,7 @@ export default function GSAPProvider({ children }) {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          toggleActions: "play none none reverse", // AOS-like behavior
+          toggleActions: "play none none reverse", 
         },
       });
     });

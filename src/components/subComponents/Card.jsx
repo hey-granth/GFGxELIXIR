@@ -66,14 +66,15 @@ const Cards = () => {
         { opacity: 1, x: 0, filter: "blur(0px)" },
         {
           opacity: 0,
-          x: i % 2 === 0 ? -100 : 100,
-          filter: "blur(8px)",
+          x: i % 2 === 0 ? -50 : 50,
+          filter: "blur(4px)",
           ease: "power2.inOut",
           scrollTrigger: {
             trigger: card,
-            start: "top 80%",
-            end: "bottom top",
-            scrub: 1.5,
+            start: "top 50%",
+            end: "bottom -10%",
+            scrub: true,
+            markers: true,
             toggleActions: "play none reverse none", // ✅ Smooth reverse
           },
         }
@@ -164,12 +165,12 @@ const Cards = () => {
       {/* 🧭 Foreground Content */}
       <div
         ref={contentRef}
-        className="relative z-20 py-24 flex flex-col items-center justify-center"
+        className="relative z-20 py-4 flex flex-col items-center justify-center"
       >
         <div className="container mx-auto px-4">
           {/* Header */}
-          <div className="text-center mb-16">
-            <p className="text-sm text-gray-400 uppercase tracking-widest mb-4 font-light">
+          <div className="text-center mb-6">
+            <p className="text-sm text-gray-400 uppercase tracking-widest mb-1 font-light">
               STRATEGIC OPERATIONS CLASSIFICATION
             </p>
             <h2 className="text-4xl md:text-6xl text-white font-light tracking-tight mb-3">
